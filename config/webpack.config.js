@@ -1,4 +1,6 @@
 const path = require('path');
+const commonWebpackModules = require('./commonWebpackModules');
+const { rules } = commonWebpackModules;
 
 const config = {
   mode: 'development',
@@ -25,17 +27,7 @@ const config = {
   },
 
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
-    ]
+    rules: [...rules]
   }
 };
 
