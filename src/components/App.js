@@ -25,6 +25,7 @@ class App extends React.Component {
         <button onClick={this.importComponent}>Click me</button>
         <button onClick={this.importComponent}>Click me too</button>
         {this.state.component && this.getComponent()}
+        dick
       </div>
     );
   }
