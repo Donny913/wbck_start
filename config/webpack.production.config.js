@@ -9,7 +9,6 @@ const config = {
 
   entry: {
     bundle: './index.js',
-    launcher: './launcher.js'
   },
 
   output: {
