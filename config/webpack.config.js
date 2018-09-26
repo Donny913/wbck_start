@@ -1,5 +1,6 @@
 const path = require('path');
 const commonWebpackModules = require('./commonWebpackModules');
+
 const { rules } = commonWebpackModules;
 
 const config = {
@@ -9,7 +10,6 @@ const config = {
 
   entry: {
     bundle: './index.js',
-    launcher: './launcher.js'
   },
 
   output: {

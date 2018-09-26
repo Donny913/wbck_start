@@ -1,5 +1,6 @@
 const path = require('path');
 const commonWebpackModules = require('./commonWebpackModules');
+
 const { rules } = commonWebpackModules;
 
 const config = {
