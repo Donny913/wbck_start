@@ -1,3 +1,4 @@
+/* eslint-disable */
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { size, space, position, border } from '@core/utils/mixin';
@@ -11,7 +12,8 @@ const Box = styled.div`
   position: ${props => props.position || 'static'};
   display: ${props => props.display || 'block'};
   box-sizing: border-box;
-  ${position} ${space};
+  ${position};
+  ${space};
   ${size};
   ${border};
   word-wrap: break-word;
