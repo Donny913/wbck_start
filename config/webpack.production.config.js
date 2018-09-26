@@ -1,7 +1,12 @@
 const path = require('path');
 const commonWebpackModules = require('./commonWebpackModules');
 
-const { rules } = commonWebpackModules;
+const {
+  module: { rules: commonRules },
+  resolve: {
+    alias: commonAlias
+  }
+} = commonWebpackModules;
 
 const config = {
   mode: 'production',
@@ -9,7 +14,7 @@ const config = {
   context: path.join(__dirname, '../src'),
 
   entry: {
-    bundle: './index.js',
+    bundle: './index.js'
   },
 
   output: {
@@ -17,8 +22,14 @@ const config = {
     path: path.join(__dirname, '../build_prod')
   },
 
+  resolve: {
+    alias: {
+      ...commonAlias
+    }
+  },
+
   module: {
-    rules: [...rules]
+    rules: [...commonRules]
   }
 };
 
