@@ -3,11 +3,7 @@ import { connect } from 'react-redux';
 
 class App extends React.Component {
   render() {
-    return (
-      <div>
-        lets go
-      </div>
-    );
+    return <div>lets go</div>;
   }
 }
 
